@@ -1,0 +1,12 @@
+ name: dbt run
+ 
+ on: push
+ 
+ jobs:
+   dbt_to_snowflake:
+      name: push to snowflake
+      runs-on: ubuntu-latest
+      
+      steps:
+        - run: dbt run
+    
