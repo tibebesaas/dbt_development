@@ -41,7 +41,7 @@
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
           body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has 
-          if: (${{ job.status }} == 'Success') 'SUCESS'
+          if: (${{ job.status }} == 'success') 'SUCESS'
           else if: (${{ job.status }} == 'failure') 'FAILED'
           # comma-separated string, send email to
           to: ${{ secrets.GROUP_EMAIL }}
