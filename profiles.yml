@@ -13,7 +13,7 @@ dev:
       database: ANALYTICS
       warehouse: COMPUTE_WH
       schema: DBT_TASFAW
-      threads: 4
+      threads: 2
       client_session_keep_alive: False
 
   target: dev
