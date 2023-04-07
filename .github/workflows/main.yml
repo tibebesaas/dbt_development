@@ -8,7 +8,16 @@
       runs-on: ubuntu-latest
       
       steps:
-        - run: pip install  dbt-core dbt-snowflake
-        - run: ls
-        - run: dbt run
+      - name: Checkout repository
+      - run: pip install  dbt-core dbt-snowflake
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+      - name: Run Yarn 
+        run: yarn
+      - name: Run tests
+        run: yarn test
+#         run: dbt run
     
