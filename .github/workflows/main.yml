@@ -9,6 +9,6 @@
       
       steps:
         - run: pip install  dbt-core dbt-snowflake
-        - run: pwd
+        - run: cd ..
         - run: dbt run
     
