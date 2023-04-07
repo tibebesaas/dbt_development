@@ -11,6 +11,6 @@
         - run: pip install  dbt-core dbt-snowflake
         - run: cd /home/runner/work/dbt_development
         - run: cd ..
-        - run: cd .dbt
+        - run: ls
         - run: dbt run
     
