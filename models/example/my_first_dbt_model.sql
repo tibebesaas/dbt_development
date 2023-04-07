@@ -21,7 +21,7 @@ with source_data as (
     )
 
 select *
-from source_data
+from source_data1
 where id is not null
 
 /*
