@@ -23,7 +23,7 @@
           node-version: '18.x'
 #       - name: Run Yarn 
 #         run: yarn
-      - name: Run tests
+      - name: Run dbt
 #         run: yarn test
         run: dbt run
     
