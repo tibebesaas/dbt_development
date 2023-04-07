@@ -26,7 +26,6 @@
       - name: Run dbt
 #         run: yarn test
         run: dbt run
-        if: ${{ job.status == 'success' }}
       - name: Send mail
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -40,8 +39,7 @@
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
-          body: echo ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has SUCCESS 
-          else: echo ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has FAILED 
+          body: echo ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} 
           # comma-separated string, send email to
           to: ${{ secrets.GROUP_EMAIL }}
           # from email name
