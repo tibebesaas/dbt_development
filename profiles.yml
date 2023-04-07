@@ -4,7 +4,7 @@ config:
 dev:
   outputs:
 
-    dev: # User-Password config
+    dev: # User-Password config CICD
       type: snowflake
       account: yf30512.west-us-2.azure
       user: LOUPICTURE
