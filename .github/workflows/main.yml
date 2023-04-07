@@ -41,9 +41,7 @@
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
           body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has 
-          color: ${{ job.status == 'success' && 'good' || 'bad' }}
-          if: (${{ job.status }} == 'success') 'SUCESS'
-          else if: (${{ job.status }} == 'failure') 'FAILED'
+          if: ${{ job.status == 'success' }} successful
           # comma-separated string, send email to
           to: ${{ secrets.GROUP_EMAIL }}
           # from email name
