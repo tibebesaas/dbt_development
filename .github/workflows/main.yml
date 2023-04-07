@@ -8,5 +8,6 @@
       runs-on: ubuntu-latest
       
       steps:
+        - run: pip install  dbt-core dbt-snowflake
         - run: dbt run
     
