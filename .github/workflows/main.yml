@@ -23,6 +23,11 @@
 #           node-version: '18.x'
 #       - name: Run Yarn 
 #         run: yarn
+      - name: npm install, build and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm test
       - name: Run dbt
 #         run: yarn test
         run: dbt run
